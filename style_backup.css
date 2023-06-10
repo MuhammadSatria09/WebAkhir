@@ -1,0 +1,137 @@
+body {
+    background-image: url(https://www.prydwen.gg/static/website_bg-344902fb3b06dc28400340c8de2e6d56.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+  }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-left{
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.navbar-left .navbar-right {
+display: block;
+width: 100%;
+height: 100%;
+padding: 14px 16px;
+list-style-type: none;
+}
+
+.navbar-right li {
+    list-style-type: none;
+    float: right;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    image-resolution: 20px;
+    position: relative;
+}
+  
+ 
+  .active {
+    background-color: #0b67d1;
+  }
+
+   .navbar-right li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 15px;
+    left: 0;
+    background-color: 
+  #0087ca;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navbar-right li:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  .Introduction{
+    color: white;
+    padding: 70px 0;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  
+  .Description{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 120px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: light;
+    font-family: serif;
+  }
+
+  .Title{
+    font-family:cambria ;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing:10px;
+    font-style: oblique;
+  }
+
+  table.tier_list{
+    border: 3px solid black;
+    font-size: 120px;
+    margin: 40px;
+    float: left;
+    text-align: center;
+  }
+
+  .s-tier{
+    background-color: #0087ca;
+    margin-right: 50px;
+  }
+
+  .a-tier{
+    background-color: aquamarine;
+  }
+
+  .c-tier{
+    background-color: yellow;
+  }
+
+  .idk{
+    background-color: grey;
+  }
+
+.idk li{
+    float: left;
+    list-style-type: none;
+    margin: 10px;
+  }
+
+.kuru{
+  color: red;
+  font-size: larger;
+  align-items: flex-end;
+  text-align: center;
+  /* float: right; */
+  display: flex;
+  /* width: 100%; */
+  /* position: absolute; */
+}
