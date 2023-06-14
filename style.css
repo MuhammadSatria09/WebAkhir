@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend');
+
 body {
   background-image: url(https://www.prydwen.gg/static/website_bg-344902fb3b06dc28400340c8de2e6d56.jpg);
   background-size: 100%;
@@ -13,13 +15,22 @@ body {
   letter-spacing: 1px;
 }
 
+li{
+  list-style-type: none;
+}
+
 a{
 text-decoration: none;
-color: white;
+color: inherit;
+}
+
+.navbar-left:hover{
+  transform: scale(1.5);
+  transition: transform .5s;
 }
 
 .navbar-left{
-padding: 0px;
+padding: 10px 30px;
 margin-top: 0px;
 }
 
@@ -55,8 +66,7 @@ list-style-type: none;
   height: 3px;
   bottom: 15px;
   left: 0;
-  background-color: 
-#0087ca;
+  background-color: #0087ca;
   transform-origin: center;
   transition: transform 0.25s ease-out;
 }
@@ -82,6 +92,7 @@ list-style-type: none;
   font-size: 30px;
   font-weight: light;
   font-family: serif;
+  animation: fadeIn 3s;
 }
 
 .Title{
@@ -92,30 +103,44 @@ list-style-type: none;
   font-weight: bold;
   letter-spacing:10px;
   font-style: oblique;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 table.tier_list{
-  border: 3px solid black;
-  font-size: 120px;
+  font-size: 40px;
+  color: whitesmoke;
+  font-family: Lexend;
+  border-radius: 20px;
+  border: 2px solid black;
   margin: 40px;
   float: left;
   text-align: center;
+  animation: fadeIn 1s;
 }
 
 .s-tier{
-  background-color: #0087ca;
-  margin-right: 50px;
+  background-color: #ec2424;
+  padding: 0px 90px;
+  border-radius: 20px;
 }
 
 .a-tier{
-  background-color: aquamarine;
+  background-color: rgb(62, 255, 72);
+  border-radius: 20px;
 }
 
 .c-tier{
   background-color: yellow;
+  border-radius: 20px;
 }
 
 .idk{
+  border-radius: 20px;
   background-color: grey;
 }
 
@@ -126,12 +151,162 @@ table.tier_list{
 }
 
 .kuru{
-color: red;
-font-size: larger;
+/* color: red; */
+/* font-size: larger; */
+animation: fadeIn 2s;
 align-items: flex-end;
 text-align: center;
-/* float: right; */
 display: flex;
-/* width: 100%; */
-/* position: absolute; */
+
 }
+
+/*  */
+/*  */
+/*  */
+
+.charac{
+  animation:fadeIn 1s;
+  width: 90%;
+  margin: 40px auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chars{
+  margin: 20px 16.5px;
+  background: transparent;
+  width: 150px;
+  height: fit-content;
+  position: relative
+}
+
+.chars img{
+  width: 80%;
+  background-color: rgba(173, 39, 173, 0.500);
+  transition: transform .2s;
+  padding-bottom:6px ;
+  border-radius: 5px;
+}
+
+.chars img[rarity="5"]{
+  background-color: rgba(235, 204, 1, 0.500);
+  padding-bottom:5px ;
+}
+
+.chars img:hover{
+  transform: scale(1.1);
+}
+
+.character_details{
+
+  display: flex;
+
+}
+
+.character_details img{
+  height: 512px;
+  float: left;
+  animation: fadeIn 1s;
+}
+
+.char_bio{
+  height: fit-content;
+  display: left;
+  animation: fadeIn 3s;
+}
+
+.char_bio table{
+
+  height: 100%;
+  border: 3px solid rgba(173, 39, 173, 0.500);
+  border-radius: 20px;
+  background-color: rgba(173, 39, 173, 0.500);
+
+}
+
+.char_bio td{
+  font-family: Lexend;
+  color:whitesmoke;
+  padding:12% 30px;
+  border-radius: 20px;
+}
+
+.char_bio tr{
+  border: 2px solid;
+}
+
+.char_bio table[rarity="5"]{
+  border: 3px solid rgba(235, 204, 1, 0.500);
+  background-color: rgba(235, 204, 1, 0.500);
+}
+
+/*  */
+/*  */
+/* POPUP */
+/*  */
+/*  */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+/*  */
+/*  */
+/* POPUP */
+/*  */
+/*  */
